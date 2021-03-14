@@ -1,0 +1,17 @@
+.ListCards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.SearchCountries {
+    text-align: center;
+    padding: 25px 0px;
+}
+
+.SearchCountries input {
+    border-radius: 5px;
+    border: 2px solid #5776c2;
+    height: 33px;
+    width: 50%;
+    padding: 0px 0px 0px 15px;
+}

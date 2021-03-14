@@ -1,0 +1,22 @@
+.CardInfoContent {
+    text-align: center;
+}
+
+.CardInfoContent img {
+    max-width: 700px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.CardInfoContentDescription {
+    margin-top: 50px;
+}
+
+.CardInfoContentLinks {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.CardInfoContentLinks a {
+    text-decoration: none;
+}
