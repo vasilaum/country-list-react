@@ -8,6 +8,7 @@ import store from './store';
 
 import CardList from './components/CardList';
 import CardInfo from './components/CardInfo';
+import CardEdit from './components/CardEdit';
 
 export default (props) => (
     <Provider store={store}>
@@ -18,6 +19,9 @@ export default (props) => (
                 </Route>
                 <Route path="/card-info/:code">
                     <CardInfo />
+                </Route>
+                <Route path="/card-edit/:index">
+                    <CardEdit />
                 </Route>
             </Switch>
         </Router>

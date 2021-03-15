@@ -13,6 +13,9 @@ export default (props) => {
                 <div>
                     <Link to={ '/card-info/' + props.country.alpha2Code }>Card Info</Link>
                 </div>
+                <div>
+                    <Link to={ '/card-edit/' + props.index }>Card Edit</Link>
+                </div>
             </div>
             <div className="Footer">
                 { props.country.name + ' | ' + props.country.nativeName }

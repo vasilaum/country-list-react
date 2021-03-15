@@ -10,28 +10,30 @@ import InputSearch from './InputSearch';
 
 const CardList  = ({ data, dispatches }) => {
     useEffect(() => {
-        fetch('https://countries-274616.ew.r.appspot.com', {
-            method  : 'POST',
-            headers : { 'Content-Type': 'application/json' },
-            body    : JSON.stringify({ query:`
-                query {
-                    Country {
-                        name
-                        nativeName
-                        capital
-                        alpha2Code
-                        flag {
-                            emoji
-                            emojiUnicode
-                            svgFile
+        if(data.countries.length < 1) {
+            fetch('https://countries-274616.ew.r.appspot.com', {
+                method  : 'POST',
+                headers : { 'Content-Type': 'application/json' },
+                body    : JSON.stringify({ query:`
+                    query {
+                        Country {
+                            name
+                            nativeName
+                            capital
+                            alpha2Code
+                            flag {
+                                emoji
+                                emojiUnicode
+                                svgFile
+                            }
                         }
                     }
-                }
-            `}),
-        })
-        .then(res => res.json()).then(res => {
-            dispatches.setAllCountries(res.data.Country);
-        })
+                `}),
+            })
+            .then(res => res.json()).then(res => {
+                dispatches.setAllCountries(res.data.Country);
+            })
+        }
     }, []);
 
     if(data.countries.length < 1) {

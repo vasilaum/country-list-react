@@ -15,6 +15,12 @@ export default function country(state = INITTIAL_STATE, action) {
             ...state,
             searchCountries: action.countries
         };
+
+    } else if(action.type == 'UPDATE_COUNTRY') {
+        state = {
+            ...state,
+            countries: action.editedCountries
+        };
     }
 
     return state;

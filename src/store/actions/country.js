@@ -11,3 +11,10 @@ export function setSearchCountries(countries) {
         countries
     }
 }
+
+export function updateCountry(editedCountries) {
+    return {
+        type: 'UPDATE_COUNTRY',
+        editedCountries
+    }
+}
