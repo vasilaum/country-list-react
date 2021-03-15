@@ -1,6 +1,6 @@
 import '../styles/CardList.css';
 
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
 
 import * as CountryActions from '../store/actions/country';
